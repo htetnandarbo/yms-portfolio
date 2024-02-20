@@ -15,10 +15,6 @@ body {
     --fourth-color: #fff;
 }
 
-section {
-    padding: 100px 0;
-}
-
 p {
     font-size: 14px;
 }
@@ -511,6 +507,10 @@ nav .middle-menu li:hover::after {
 #specialities .skills span {
     height: 10px;
     line-height: 5px;
+}
+
+#specialities .skillContent {
+    font-size: 16px;
 }
 
 .accordion-item:last-of-type .accordion-button.collapsed {

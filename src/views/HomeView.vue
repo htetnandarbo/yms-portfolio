@@ -2,7 +2,7 @@
   <div>
 
     <!-- HEADER -->
-    <section id="header2" class="pt-0">
+    <section id="header2" class="pt-0 py-5">
       <div class="container px-0 row m-auto overflow-hidden  gy-5">
         <div class="col-lg-4  d-flex align-items-center  justify-content-center">
           <div class="header-col">
@@ -60,7 +60,7 @@
     </section>
 
     <!-- ABOUT ME -->
-    <section id="aboutMe" class="container">
+    <section id="aboutMe" class="container py-5">
       <div class="fw-bold">
         <h1 class="main-heading fw-bold pb-5" data-aos="zoom-in">About Me</h1>
         <div class="row">
@@ -118,7 +118,7 @@
     </section>
 
     <!-- MY SPECIALTIES -->
-    <section id="specialities" class="container">
+    <section id="specialities" class="container py-5">
       <div class="container">
         <h1 class="main-heading fw-bold pb-5" data-aos="zoom-in">My Specialties</h1>
         <div class="accordion" id="accordionExample">
@@ -142,7 +142,7 @@
                     <div v-for="skill in filteredSkills(category.name)" :key="skill.id">
                       <div class="d-flex align-items-center mb-2">
                         <i class="fa-solid fa-caret-right me-2"></i>
-                        <p class="m-0">{{ skill.content }}</p>
+                        <p class="m-0 skillContent">{{ skill.content }}</p>
                       </div>
                     </div>
                   </div>
@@ -157,7 +157,7 @@
 
 
     <!-- MY LATEST BLOG -->
-    <section id="blog" class="container">
+    <section id="blog" class="container py-5">
       <h1 class="main-heading fw-bold pb-5" data-aos="zoom-in">My Latest Blog</h1>
       <div class="container row gy-2" data-aos="fade-up" data-aos-duration="1000">
         <div class="main-card col-lg-4 col-md-6" v-for="blog in blogs" :key="blog.id">
@@ -184,7 +184,7 @@
     </section>
 
     <!-- GET IN TOUCH -->
-    <section id="get-in-touch" class="container container-fluid text-dark pb-0">
+    <section id="get-in-touch" class="container container-fluid text-dark pt-5">
       <div class="container pb-5">
         <h1 class="main-heading fw-bold pb-1" data-aos="zoom-in">Get in Touch</h1>
         <div class="" style="text-align: center;">For Business and partnership inquiry please contact me below!</div>
