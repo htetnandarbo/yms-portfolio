@@ -1,0 +1,739 @@
+/* Common */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--fourth-color);
+    overflow-x: hidden;
+}
+
+:root {
+    --first-color: blue;
+    --second-color: rgb(31, 29, 155);
+    --third-color: rgb(61, 13, 128);
+    --fourth-color: #fff;
+}
+
+section {
+    padding: 100px 0;
+}
+
+p {
+    font-size: 14px;
+}
+
+
+.main-heading {
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+}
+
+.textColor {
+    color: var(--second-color);
+}
+
+.button {
+    font-size: 16px;
+    position: relative;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    color: #ececf3;
+    cursor: pointer;
+    background: linear-gradient(to top right, rgb(28, 28, 89), blue);
+    transition: all 0.2s ease;
+}
+
+.button:active {
+    transform: scale(0.96);
+}
+
+.button:before,
+.button:after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+}
+
+.button:hover:before {
+    top: -70%;
+    background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+        10% 10%, 18% 18%;
+    background-position: 50% 120%;
+    animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+    0% {
+        background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+            40% 90%, 55% 90%, 70% 90%;
+    }
+
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+            50% 50%, 65% 20%, 90% 30%;
+    }
+
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+            50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+.button:hover::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 50% 0%;
+    animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+    0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+            70% -10%, 70% 0%;
+    }
+
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+            105% 0%;
+    }
+
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+            110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+
+/* Nav */
+
+.social-icon {
+    --color: var(--second-color);
+    font-family: inherit;
+    display: inline-block;
+    width: 6em;
+    height: 2.6em;
+    line-height: 2.5em;
+    overflow: hidden;
+    font-size: 17px;
+    z-index: 1;
+    color: var(--color);
+    border-radius: 6px;
+    position: relative;
+}
+
+.social-icon::before {
+    position: absolute;
+    content: "";
+    background: var(--color);
+    width: 150px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.social-icon:hover {
+    color: white !important;
+}
+
+.social-icon:before {
+    top: 100%;
+    left: 100%;
+    transition: .3s all;
+}
+
+.social-icon:hover::before {
+    top: -30px;
+    left: -30px;
+}
+
+nav {
+    font-size: 16px;
+}
+
+nav .container {
+    padding-left: 28px;
+}
+
+nav .navfont {
+    font-size: 14px;
+}
+
+nav .contact-me {
+    position: relative;
+    overflow: hidden;
+}
+
+.Ylogo {
+    font-size: 20px;
+    padding: 6px 12px;
+    background: linear-gradient(to top right, rgb(28, 28, 89), blue);
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+nav .active {
+    color: var(--second-color) !important;
+}
+
+nav .middle-menu li {
+    position: relative;
+    transition: 5s;
+}
+
+nav .middle-menu li::before {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: rgb(26, 26, 188);
+    position: absolute;
+    left: 40%;
+    bottom: 0;
+    transition: .3s;
+}
+
+nav .middle-menu li:hover::before {
+    width: 50%;
+}
+
+nav .middle-menu li::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: rgb(26, 26, 188);
+    position: absolute;
+    right: 40%;
+    bottom: 0;
+    transition: .3s;
+}
+
+nav .middle-menu li:hover::after {
+    width: 50%;
+}
+
+/* Header */
+#header2 .ex i {
+    font-size: 40px;
+}
+
+#header2 .header-col p {
+    font-size: 20px;
+}
+
+.circleImgGroup {
+    display: flex;
+    justify-content: center;
+}
+
+.circles {
+    position: relative;
+    top: -45px;
+    display: flex;
+    justify-content: center;
+}
+
+.blueCircle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 16%;
+    z-index: -1;
+}
+
+.circleImgGroup {
+    z-index: 1;
+}
+
+.circle1 {
+    width: 340px;
+    height: 340px;
+    background-color: rgb(235, 235, 244);
+    border-radius: 50%;
+}
+
+.circle2 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(176, 176, 222);
+    border-radius: 50%;
+}
+
+.circle3 {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    background-color: rgb(34 34 191);
+    border-radius: 50%;
+}
+
+.icons-group {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    padding-bottom: 48px;
+}
+
+.icon {
+    display: inherit;
+}
+
+.icon .btn {
+    width: 50px;
+    height: 50px;
+    /* line-height: 35px; */
+    background-color: aliceblue;
+    color: var(--first-color);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon i {
+    font-size: 1.3rem;
+}
+
+
+.card1 {
+    width: 170px;
+    padding: 10px 4px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 5rem;
+    left: -70px;
+    z-index: 1;
+    background-color: #fff;
+    animation: cardShake1 3s ease infinite;
+}
+
+.card1 i,
+.card2 i {
+    padding: 10px;
+    background-color: #D6EAF8;
+    color: rgb(34 34 191);
+    border-radius: 50%;
+    display: flex;
+}
+
+.card1 p,
+.card2 p {
+    font-size: 13px;
+    margin: 0;
+}
+
+.card2 {
+    width: 80px;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    right: 0px;
+    background-color: #fff;
+    animation: cardShake2 3s ease infinite;
+}
+
+@keyframes cardShake1 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardShake2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* About Me */
+#aboutMe .container {
+    margin-bottom: 70px;
+    border: 2px solid red;
+}
+
+#aboutMe h2 {
+    font-size: 45px;
+    font-weight: bolder;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#aboutMe .aboutimg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#aboutMe .aboutimg figure {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 280px;
+    height: 280px;
+    border-radius: 50%;
+}
+
+#aboutMe .aboutimg figure::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 130px;
+    background: linear-gradient(to top right, rgb(25, 25, 120), rgb(64, 145, 215));
+    transform: rotate(-10deg);
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+
+#aboutMe .aboutimg .sport-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translateX(10px);
+}
+
+#aboutMe figure .sport {
+    z-index: -4 !important;
+    position: absolute;
+    top: 114px;
+    left: 29px;
+    width: 72px;
+}
+
+#aboutMe .aboutletter {
+    padding-left: 42px;
+}
+
+#aboutMe .aboutText {
+    font-size: 15px;
+    padding-bottom: 20px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 500;
+}
+
+#aboutMe .aboutTel i {
+    padding: 11px 12px;
+    background-color: rgb(233, 232, 232);
+    border-radius: 50%;
+}
+
+#aboutMe .aboutIcon ul li i {
+    background-color: rgb(233, 232, 232);
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px;
+    margin-right: 10px;
+    font-weight: 20px;
+}
+
+#aboutMe .addtext {
+    font-size: 15px;
+}
+
+#aboutMe .paddingleft ul {
+    padding-left: 20px;
+}
+
+#aboutMe .aboutfont {
+    font-size: 17px;
+    line-height: 1;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 500;
+}
+
+#aboutMe .textColor {
+    font-weight: bolder;
+}
+
+#aboutMe .iconPs {
+    padding-left: 50px;
+}
+
+/*  My Specialities  */
+#specialities h6 {
+    font-size: 17px;
+    font-weight: 900;
+}
+
+#specialities .skills span {
+    height: 10px;
+    line-height: 5px;
+}
+
+.accordion-item:last-of-type .accordion-button.collapsed {
+    border-radius: 0px;
+}
+
+.accordion-item {
+    border: none;
+}
+
+.accordion-button {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.accordion-button:not(.collapsed) {
+    border: none;
+    color: var(--second-color);
+}
+
+.accordion-button:focus {
+    border: #fff;
+    box-shadow: none;
+}
+
+.accordion-body {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.accordion-button:not(.collapsed) {
+    box-shadow: none;
+}
+
+#specialities button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-dash-lg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z'/%3E%3C/svg%3E");
+}
+
+.accordion-button::after {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+}
+
+#specialities button:not(.collapsed) {
+    background-color: #fff;
+}
+
+#specialities button:not(.collapsed) h6 {
+    color: #000;
+}
+
+
+#specialities button::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus-lg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z'/%3E%3C/svg%3E");
+}
+
+/* My Works */
+#works .active {
+    color: #3a34df;
+}
+
+.works:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+#works li {
+    cursor: pointer;
+}
+
+/* ==== BLOG ==== */
+
+
+#blog img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    transition: all 0.5s;
+}
+
+#blog .main-card img:hover {
+    transform: scale(1.05);
+}
+
+#blog .arrow-icon {
+    color: var(--second-color);
+    position: absolute;
+    font-size: 25px;
+    top: 5px;
+    right: 10px;
+}
+
+#blog .card-body {
+    position: relative;
+}
+
+
+/* Get in Touch */
+#get-in-touch .container,
+.container-fluid {
+    padding-right: 0;
+}
+
+#get-in-touch .Content span {
+    font-size: 14px;
+}
+
+#get-in-touch ul li {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+#get-in-touch ul li i {
+    border: 1.5px solid var(--second-color);
+    color: var(--second-color);
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 38px;
+    margin-right: 5px;
+}
+
+#get-in-touch input {
+    padding: 11px 15px;
+    border-radius: 5px;
+}
+
+#get-in-touch .button a {
+    text-decoration: none;
+}
+
+#get-in-touch .button {
+    position: relative;
+    padding: 8px 25px;
+    padding: 10px 22px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    color: var(--fourth-color);
+    background-color: var(--second-color);
+    transition: all 0.2s ease;
+}
+
+#get-in-touch .button:active {
+    transform: scale(0.96);
+}
+
+#get-in-touch .button:before,
+#get-in-touch .button:after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+}
+
+#get-in-touch .button:hover:before {
+    top: -70%;
+    background-image: radial-gradient(circle, #3a34df 20%, transparent 20%),
+        radial-gradient(circle, transparent 20%, #3a34df 20%, transparent 30%),
+        radial-gradient(circle, #3a34df 20%, transparent 20%),
+        radial-gradient(circle, #3a34df 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, #3a34df 15%, transparent 20%),
+        radial-gradient(circle, #3a34df 20%, transparent 20%),
+        radial-gradient(circle, #3a34df 20%, transparent 20%),
+        radial-gradient(circle, #3a34df 20%, transparent 20%),
+        radial-gradient(circle, #3a34df 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+        10% 10%, 18% 18%;
+    background-position: 50% 120%;
+    animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+    0% {
+        background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+            40% 90%, 55% 90%, 70% 90%;
+    }
+
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+            50% 50%, 65% 20%, 90% 30%;
+    }
+
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+            50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+#get-in-touch .button:hover::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, #3a34df 20%, transparent 20%),
+        radial-gradient(circle, #3a34df 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, #3a34df 15%, transparent 20%),
+        radial-gradient(circle, #3a34df 20%, transparent 20%),
+        radial-gradient(circle, #3a34df 20%, transparent 20%),
+        radial-gradient(circle, #3a34df 20%, transparent 20%),
+        radial-gradient(circle, #3a34df 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 50% 0%;
+    animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+    0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+            70% -10%, 70% 0%;
+    }
+
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+            105% 0%;
+    }
+
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+            110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}

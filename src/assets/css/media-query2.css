@@ -1,0 +1,85 @@
+@media (max-width: 991px) {
+  /* nav .contactborder {
+    border: 0;
+    margin-left: 5px;
+  } */
+  nav .middle-menu li:hover::before {
+    width: 0%;
+    height: 0;
+  }
+  nav .middle-menu li:hover::after {
+    width: 0%;
+    height: 0;
+  }
+  /* nav a:hover {
+    color: red;
+    background-color: aqua;
+  } */
+
+  /* header */
+   .card1 {
+    left: 90px;
+   }
+   .card2 {
+    right: 8rem;
+   }
+   .icons-group {
+      justify-content: center;
+    }
+
+
+    /* About */
+    #aboutMe .row .center {
+      justify-content: center;
+    }
+    #aboutMe .yearEx {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0;
+    }
+    #aboutMe .yearEx .year {
+      /* width: 93%; */
+      margin-right: 20px;
+    }
+    #aboutMe .center {
+      padding: 0 70px;
+    }
+    #aboutMe .aboutletter {
+      padding-left: 0px;
+    }
+    #aboutMe .aboutText {
+      font-size: 13px;
+      padding: 0px;
+    }
+   #aboutMe .textColor {
+      font-weight: bolder;
+      font-size: 2.5rem;
+    }
+  #aboutMe .iconPs {
+      padding-left: 13px;
+   }
+}
+@media (max-width: 765px) {
+    .card1 {
+     left: 10px;
+    }
+    .card2 {
+     right: 2rem;
+    }
+ }
+ @media (max-width: 540px) {
+    .card1 {
+     left: 0px;
+    }
+    .card2 {
+     right: 0rem;
+    }
+    #aboutMe .yearEx {
+      display: block;
+    }
+    #aboutMe .yearEx .year {
+      /* width: 93%; */
+      margin-right: 20px;
+    }
+ }
