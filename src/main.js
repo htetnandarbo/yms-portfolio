@@ -1,6 +1,5 @@
 import './assets/css/style.css'
 import './assets/css/media-query2.css'
-import './assets/css/wathan.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'

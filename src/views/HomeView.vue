@@ -155,6 +155,40 @@
       </div>
     </section>
 
+    <!-- MY PROJECTS -->
+    <section class="container py-5">
+      <h1 class="main-heading fw-bold pb-5" data-aos="zoom-in">My Projects</h1>
+      <div class="row d-flex align-items-end">
+        <div class="col-md-1"></div>
+        <div class="col-md-4 mb-4">
+          <h3>Project Statistics</h3>
+          <p>2018 - Present</p>
+          <button class="button mt-1">
+            <a href="" class="text-light text-decoration-none">
+              Visit My Project <i class="fa-solid fa-arrow-right ps-1"></i>
+            </a>
+
+          </button>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+          <div class="d-flex justify-content-between p-0 project-count mb-4 fw-bold">
+            <p>Website Design</p>
+            <span>75</span>
+          </div>
+
+          <div class="d-flex justify-content-between p-0 project-count mb-4 fw-bold">
+            <p>Fullstack Projects</p>
+            <span>62</span>
+          </div>
+
+          <div class="d-flex justify-content-between p-0 project-count fw-bold">
+            <p>UI Design Projects</p>
+            <span>28</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- MY LATEST BLOG -->
     <section id="blog" class="container py-5">

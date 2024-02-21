@@ -1,8 +1,8 @@
 <template>
   <div>
-    <!-- MY WORKS -->
+    <!-- MY PROJECTS -->
     <section id="works" class="container py-5">
-      <h2 class="main-heading fw-bold pb-5" data-aos="zoom-in">My Works</h2>
+      <h2 class="main-heading fw-bold pb-5" data-aos="zoom-in">My Projects</h2>
       <ul class="d-flex justify-content-center fw-semibold">
         <li v-for="category in categories" :key="category.id" class="list-group-item me-5">
           <span :class="{ 'active': category.name === selectedCategory }" class="nav-link"
