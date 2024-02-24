@@ -8,13 +8,15 @@
           <div class="header-col">
             <span class="ex"><i class="bi bi-quote"></i></span>
 
-            <p class="ps-2">I design and code beautifully <br> simple things, and I love what I do.</br>
-              I design and code beautifully <br> simple things, and I love what I do.</p>
+            <p class="ps-2">
+              WEB DEVELOPMENT isn't just a job, it's my passion. I pour my heart and soul into every project, crafting
+              solutions that delight users and empower businesses to soar. Ready to see how I can elevate your project?
+            </p>
           </div>
         </div>
         <div class="col-lg-4 ">
           <div class="main position-relative">
-            <h6 class="text-center fw-bold" data-aos="fade-right">Hi, I'm <span class="textColor">Ye Myint Soe,</span>
+            <h6 class="text-center fw-bold" data-aos="fade-right">Hello, I'm <span class="textColor">Ye Myint Soe!</span>
             </h6>
             <h1 class="main-heading fw-bold" data-aos="fade-left">FullStack Developer</h1>
 
@@ -48,12 +50,16 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4  icons-group">
+        <div class="col-lg-4 icons-group">
           <div class="icon">
-            <a href="" class="btn me-3 social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="" class="btn me-3 social-icon"><i class="fa-brands fa-instagram"></i></a>
-            <a href="" class="btn me-3 social-icon"><i class="bi bi-whatsapp"></i></a>
-            <a href="" class="btn social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/yemyintsoethehappycoder" target="_blank" class="btn me-3 social-icon"><i
+                class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@ymsmyanmarprogrammingtutorials" target="_blank"
+              class="btn me-3 social-icon"><i class="bi bi-youtube"></i></a>
+            <a href="https://github.com/yemyintsoe" target="_blank" class="btn me-3 social-icon"><i
+                class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/ye-myint-soe-salai" target="_blank" class="btn social-icon"><i
+                class="fa-brands fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>
@@ -73,42 +79,45 @@
           </div>
           <div class="col-lg-7 center">
             <div class="row border-bottom aboutletter">
-              <div class="col-lg-6 yearEx">
+              <div class="col-lg-12 yearEx">
                 <div class="d-flex year align-items-end">
-                  <h2 class="pe-2 textColor">10+</h2>
-                  <p class="fw-bold aboutfont">Years <br>experience . . .</p>
+                  <h2 class="pe-2 textColor">6+</h2>
+                  <p class="fw-bold aboutfont">Years <br>Experience . . .</p>
                 </div>
-                <p class="aboutText">Hello there!My name is Ye Myint Soe. I am a web designer & developer, and
-                  I'm very passionate and dedicated to my work. I am web designer & developer.</p>
+                <p class="aboutText">
+                  Hello! I'm Ye Myint Soe, a Full-stack Web Developer with over 6 years of experience. My passion lies in
+                  crafting engaging, intuitive and efficient web solutions that empower users and accelerate businesses
+                  forward. I'm enthusiastic about my work and driven by the transformative impact it can have.
+                </p>
               </div>
-              <div class="col-lg-6 yearEx">
+              <!-- <div class="col-lg-6 yearEx">
                 <div class="d-flex year align-items-end">
                   <h2 class="pe-2 textColor">1K+</h2>
                   <p class="fw-bold aboutfont">Students <br>Worldwide . . .</p>
                 </div>
                 <p class="aboutText">Within 10+ years experience as a professional a graphic designer, I have
                   acquired the skill and knowledge necessary to make your project a success.</p>
-              </div>
+              </div> -->
             </div>
             <div class="row aboutIcon aboutTel">
               <div class="col-lg-6 pt-4 iconPs">
                 <div class="d-flex mb-4 pb-3">
                   <div><i class="bi bi-telephone mb-2 me-3"></i></div>
-                  <div class="addtext">+09 963 163 029</div>
+                  <div class="addtext">+95 9 777 874 547</div>
                 </div>
                 <div class="d-flex">
                   <div><i class="bi bi-envelope me-3"></i></div>
-                  <div class="addtext">yms@gmail.com</div>
+                  <div class="addtext">yms.yemyintsoe@gmail.com</div>
                 </div>
               </div>
               <div class="col-lg-6 pt-4 ps-lg-4">
                 <div class="d-flex mb-4 pb-3">
                   <div><i class="bi bi-person-square mb-2 me-3"></i></div>
-                  <div class="addtext">25 yrs</div>
+                  <div class="addtext">26 Year</div>
                 </div>
                 <div class="d-flex">
                   <div><i class="bi bi-geo-alt me-3"></i></div>
-                  <div class="addtext">United Kingdom, London</div>
+                  <div class="addtext">Yangon, Myanmar</div>
                 </div>
               </div>
             </div>
@@ -196,10 +205,10 @@
       <div class="container row gy-2" data-aos="fade-up" data-aos-duration="1000">
         <div class="main-card col-lg-4 col-md-6" v-for="blog in blogs" :key="blog.id">
           <div>
-            <img class="img-fluid" :src="blog.image" alt="">
+            <img class="img-fluid" :src="blog.image" alt="" style="object-fit: cover;">
             <div class="card-body text-black pt-3">
-              <p>{{ blog.title }}</p>
-              <a href="#" class="arrow-icon">
+              <p>{{ blog.title.toUpperCase() }}</p>
+              <a :href="blog.src" target="_blank" class="arrow-icon">
                 <i class="bi bi-arrow-up-right-circle-fill"></i>
               </a>
             </div>
@@ -208,12 +217,9 @@
       </div>
 
       <div class="d-flex justify-content-center mt-3">
-        <button class="button">
-          <a href="" class="text-light text-decoration-none">
-            Load More <i class="fa-solid fa-arrow-right ps-1"></i>
-          </a>
-
-        </button>
+        <a href="https://yemyintsoe.medium.com" target="_blank" class="button text-light text-decoration-none">
+          Load More <i class="fa-solid fa-arrow-right ps-1"></i>
+        </a>
       </div>
     </section>
 
@@ -230,8 +236,8 @@
             <li class="py-2 d-flex align-items-center">
               <i class="bi bi-telephone me-3"></i>
               <div class="d-flex flex-column">
-                <span class="text-secondary">Call me</span>
-                <span class="fw-bold">+95 9251749823</span>
+                <span class="text-secondary">Call Me</span>
+                <span class="fw-bold">+95 9 777 874 547</span>
               </div>
             </li>
 
@@ -239,7 +245,7 @@
               <i class="bi bi-envelope me-3"></i>
               <div class="d-flex flex-column">
                 <span class="text-secondary">Email Me</span>
-                <span class="fw-bold">aefehuhjn@gmail.com</span>
+                <span class="fw-bold">yms.yemyintsoe@gmail.com</span>
               </div>
             </li>
 
@@ -247,7 +253,7 @@
               <i class="bi bi-geo-alt me-3"></i>
               <div class="d-flex flex-column">
                 <span class="text-secondary">Address</span>
-                <span class="fw-bold">No.24 Hlaing, Yangon, Myanmar</span>
+                <span class="fw-bold">Yangon, Myanmar</span>
               </div>
             </li>
           </ul>
